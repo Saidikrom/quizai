@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,13 +27,7 @@ class CustomButton extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
            void _submit() {
-            // if (formkey.currentState!.validate()) {
-            //   // Validation passed, submit the form
-            // }
           }
-          print(map);
-          // print(ed.toString());
-          // Navigator.of(context).pushNamed("/bottom");
         },
         child: Container(
           width: 350.w,

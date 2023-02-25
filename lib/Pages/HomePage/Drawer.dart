@@ -13,7 +13,7 @@ import 'package:quizai/models/onBoarding_text_model.dart';
 import '../../core/constants/colors_const.dart';
 
 class Drawers extends StatelessWidget {
-  Drawers({
+  const Drawers({
     Key? key,
   }) : super(key: key);
 
@@ -187,7 +187,7 @@ class Drawers extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SettingPage()),
+                    MaterialPageRoute(builder: (context) => const SettingPage()),
                   );
                 },
                 leading: SvgPicture.asset(

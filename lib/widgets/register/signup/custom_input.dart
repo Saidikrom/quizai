@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, body_might_complete_normally_nullable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constants/colors_const.dart';
 import '../../../core/constants/radius_const.dart';
 
-class InputWidget extends StatelessWidget {
+class InputWidget extends StatefulWidget {
   final String text;
   final Icon icon;
   final TextInputType textInputType;
@@ -26,8 +26,13 @@ class InputWidget extends StatelessWidget {
     required this.formkey,
     // this.map,
   }) : super(key: key);
-  // final _formKey = GlobalKey<FormState>();
 
+  @override
+  State<InputWidget> createState() => _InputWidgetState();
+}
+
+class _InputWidgetState extends State<InputWidget> {
+  // final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -36,23 +41,23 @@ class InputWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            text,
+            widget.text,
             style: GoogleFonts.nunitoSans(fontWeight: FontWeight.w600),
           ),
           SizedBox(
             height: 5.h,
           ),
           Form(
-            key: formkey,
+            key: widget.formkey,
             child: SizedBox(
               width: 380.w,
               height: 80.h,
               child: TextFormField(
-                controller: textEditingController,
-                obscureText: isShow,
+                controller: widget.textEditingController,
+                obscureText: widget.isShow,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  prefixIcon: icon,
+                  prefixIcon: widget.icon,
                   border: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: ColorConst.kWhiteColor,
@@ -68,27 +73,25 @@ class InputWidget extends StatelessWidget {
                   ),
                 ),
                 validator: (info) {
-                  if (text == 'Full name') {
-                    if (info!.isEmpty || info == null) {
+                  setState(() {});
+                  if (widget.text == 'Full name') {
+                    if (info!.isEmpty ) {
                       return "Please enter Full Name";
                     }
-                    // else if (!info.contains("@")) {
-                    //   return "Please enter more than 6 word";
-                    // }
-                  } else if (text == 'Email') {
-                    if (info!.isEmpty || info == null) {
+                  } else if (widget.text == 'Email') {
+                    if (info!.isEmpty) {
                       return "Please enter Email";
                     } else if (!info.contains("@")) {
                       return "Please enter true email";
                     }
-                  } else if (text == 'Password') {
-                    if (info!.isEmpty || info == null) {
+                  } else if (widget.text == 'Password') {
+                    if (info!.isEmpty) {
                       return "Please enter password";
                     } else if (info.length < 6) {
                       return "Please enter more than 6 words";
                     }
-                  } else if (text == 'Confirm Password') {
-                    if (info!.isEmpty || info == null) {
+                  } else if (widget.text == 'Confirm Password') {
+                    if (info!.isEmpty) {
                       return "Please enter password";
                     }
                     // else if (!info.contains("@")) {

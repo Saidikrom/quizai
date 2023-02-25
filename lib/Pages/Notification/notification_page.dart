@@ -17,7 +17,7 @@ class NotificationPage extends StatelessWidget {
           children: [
             Stack(
               children: [
-                TopPart(),
+               const TopPart(),
                 SafeArea(
                   child: Padding(
                     padding: EdgeInsets.symmetric(
@@ -47,7 +47,7 @@ class NotificationPage extends StatelessWidget {
                                 physics: const NeverScrollableScrollPhysics(),
                                 itemCount: 10,
                                 itemBuilder: (ctx, i) {
-                                  return NotificationList();
+                                  return const NotificationList();
                                 }),
                           ),
                         ),

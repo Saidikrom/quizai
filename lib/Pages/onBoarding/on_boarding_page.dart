@@ -117,7 +117,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         counter == 2
                             ? setState(() {
                                 counter = 2;
-                                Navigator.of(context).pushNamed("/signUp");
+                                Navigator.of(context).pushNamed("/auth");
                               })
                             : setState(() {
                                 counter++;

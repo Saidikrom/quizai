@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +7,7 @@ import '../../core/constants/colors_const.dart';
 class CustomSettingPart1 extends StatefulWidget {
   final String text;
   final String icon;
-  CustomSettingPart1({
+  const CustomSettingPart1({
     Key? key,
     required this.text,
     required this.icon,

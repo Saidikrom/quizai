@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quizai/core/constants/colors_const.dart';
@@ -7,7 +7,7 @@ import 'package:quizai/widgets/top_back_button.dart';
 import 'tripple_container2.dart';
 
 class SettingPage extends StatelessWidget {
-  SettingPage({super.key});
+  const SettingPage({super.key});
 
   @override
   Widget build(BuildContext context) {

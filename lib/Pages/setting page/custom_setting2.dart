@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -64,7 +63,7 @@ class _CustomSettingPart2State extends State<CustomSettingPart2> {
                 width: 100.w,
                 height: 35.h,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 34, 45, 116),
+                  color: const Color.fromARGB(255, 34, 45, 116),
                   borderRadius: RadiusConst.r12,
                   boxShadow: [
                     BoxShadow(

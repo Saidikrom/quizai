@@ -5,7 +5,6 @@ import 'package:quizai/Pages/Profile/Badge_part.dart';
 
 import '../../core/constants/colors_const.dart';
 import '../../core/constants/radius_const.dart';
-import 'Badge_part.dart';
 import 'badge_ranks_part.dart';
 
 class Badges extends StatelessWidget {

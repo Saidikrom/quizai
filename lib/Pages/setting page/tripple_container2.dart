@@ -33,7 +33,7 @@ class TripleContainer2 extends StatelessWidget {
                 child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
-                  children: [
+                  children: const [
                     CustomSettingPart1(
                       text: "Sound",
                       icon: "assets/images/speaker_image.png",

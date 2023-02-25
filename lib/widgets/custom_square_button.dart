@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../core/constants/colors_const.dart';
 import '../core/constants/radius_const.dart';
 
 class SquareButtun extends StatelessWidget {

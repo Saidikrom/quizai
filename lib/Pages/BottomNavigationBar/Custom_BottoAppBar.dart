@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
@@ -53,7 +53,7 @@ class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
       childDecoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
-      drawer: Drawers(),
+      drawer: const Drawers(),
       child: Scaffold(
         extendBody: true,
         body: Stack(

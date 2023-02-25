@@ -1,0 +1,4 @@
+#Fri Feb 24 19:35:18 UZT 2023
+base.0=E\:\\flutter project\\quizai\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
